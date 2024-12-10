@@ -110,7 +110,7 @@ public class GasTankScript : MonoBehaviour {
 		//Play the impact sound on every collision
 		impactSound.Play ();
 	}
-
+	
 	private IEnumerator Explode ()
 	{
 		//Wait for set amount of time

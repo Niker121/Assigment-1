@@ -139,6 +139,7 @@ public class Projectile : MonoBehaviour {
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
+		
 	}
 
 	private IEnumerator DestroyTimer () 

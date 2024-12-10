@@ -113,6 +113,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (animator != null)
         {
             animator.SetTrigger("Attack");
+            Debug.Log("attack");
         }
 
         // Deal damage to the target if within range
@@ -122,6 +123,7 @@ public class Enemy : MonoBehaviour, IDamageable
             if (damageable != null)
             {
                 damageable.TakeDamage(damage);
+                
             }
         }
 

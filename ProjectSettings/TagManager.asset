@@ -17,6 +17,8 @@ TagManager:
   - Dirt (Static)
   - Wood
   - Tui
+  - Bullet
+  - Zoobie
   layers:
   - Default
   - TransparentFX
