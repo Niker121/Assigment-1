@@ -95,7 +95,7 @@ namespace InfimaGames.LowPolyShooterPack
         {
             //Rigidbody Setup.
             rigidBody = GetComponent<Rigidbody>();
-            rigidBody.constraints = RigidbodyConstraints.FreezeRotation;
+            rigidBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY; 
             //Cache the CapsuleCollider.
             capsule = GetComponent<CapsuleCollider>();
 

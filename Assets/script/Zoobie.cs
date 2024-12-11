@@ -26,6 +26,7 @@ public class Zombie : MonoBehaviour
 
     void Start()
     {
+       
         currentHp = maxHp; // Khởi tạo máu hiện tại bằng tối đa
     }
 
@@ -90,9 +91,12 @@ public class Zombie : MonoBehaviour
         }
         if (currentHp <= 0)
         {
+            collider.enabled = false;
             currentHp = 0; // Đảm bảo không có giá trị âm
+            FindObjectOfType<Mission>().killEnermy();
             Die(); // Gọi phương thức chết
             audioSource.Play();
+           
         }
        
         // Có thể phát hoạt ảnh cho bị thương
@@ -103,7 +107,8 @@ public class Zombie : MonoBehaviour
     {
         animator.SetTrigger("die");
         agent.isStopped = true; // Dừng NavMeshAgent
-        collider.enabled = false;
+       
+        
         // Thêm logic để loại bỏ zombie khỏi trò chơi
         Destroy(gameObject,2f); // Hủy đối tượng sau 2 giây
         Debug.Log("Zoobie is die animattion");

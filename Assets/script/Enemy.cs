@@ -63,6 +63,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
         if (currentHealth <= 0)
         {
+            GetComponent<Collider>().enabled = false;
             Die();
         }
     }
