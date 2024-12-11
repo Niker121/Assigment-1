@@ -21,7 +21,7 @@ public class Mission : MonoBehaviour
     {
         NPCContent.text = "";
         coroutine = StartCoroutine(ReadContent());
-        QuestPanel.SetActive(false);
+        quest = 0; quest = 0;
     }
 
     private IEnumerator ReadContent()
@@ -41,9 +41,9 @@ public class Mission : MonoBehaviour
            
         NPCContent.text = "";
         NPCPnel.SetActive(false);
-        QuestPanel.SetActive(true);
-        quest = 0; // Đặt lại số lượng quái khi bắt đầu nhiệm vụ
-        QuestContent.text = "Giết quái: " + quest + "/20";
+       
+        // Đặt lại số lượng quái khi bắt đầu nhiệm vụ
+        
     }
 
     public void endContent()
